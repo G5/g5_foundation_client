@@ -1,10 +1,7 @@
 require 'spec_helper'
 
 describe G5FoundationClient::Location do
-  before do
-    G5FoundationClient.endpoint_host = "example.com"
-    G5FoundationClient.access_token = "token"
-  end
+  before { G5FoundationClient.access_token = "token" }
 
   describe "instantiating with a hash" do
     subject do
@@ -24,44 +21,10 @@ describe G5FoundationClient::Location do
     let(:uid) do
       "http://example.com/clients/g5-c-1234-client/locations/g5-cl-1234-location"
     end
-    let(:url) { "#{uid}?access_token=token" }
-    subject(:find) do
-      G5FoundationClient::Location.find_by_uid(uid)
-    end
+    let(:response) { fixture("location_detail.html") }
+    before { stub_json(uid + "?access_token=token", response) }
+    subject(:find) { G5FoundationClient::Location.find_by_uid(uid) }
 
-    context "when there is a Location at that UID" do
-      before do
-        stub_json(url, response)
-        G5FoundationClient::Deserializers::Location.
-          stub(:from_markup).
-          with(fixture("location_detail.html")).
-          and_return(location)
-      end
-      let(:location) { double }
-      let(:response) { fixture("location_detail.html") }
-
-      it { should eq(location) }
-    end
-
-    context "when there is no Location at that UID" do
-      before { stub_json(url, response, 404) }
-      let(:response) { %["<html><body>Something went wrong</body></html>] }
-
-      it "explodes violently" do
-        expect { find }.to raise_error(
-          G5FoundationClient::RecordNotFoundException,
-          /Location.+g5-cl-1234-location/
-        )
-      end
-    end
-
-    context "when there is an unexpected response" do
-      before { stub_json(url, response, 418) }
-      let(:response) { %[{"error":"I'm a teapot"}] }
-
-      it "explodes violently" do
-        expect { find }.to raise_error(/418/)
-      end
-    end
+    its(:name) { should eq("Test Location") }
   end
 end

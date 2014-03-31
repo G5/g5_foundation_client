@@ -25,5 +25,7 @@ module G5FoundationClient
   end
 end
 
+require 'g5_foundation_client/fetcher'
+
 require 'g5_foundation_client/models/location'
 require 'g5_foundation_client/deserializers/location'
