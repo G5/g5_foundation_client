@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = G5FoundationClient::VERSION
   spec.authors       = ["Don Petersen"]
   spec.email         = ["don@donpetersen.net"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Client gem to interact with G5 services.}
+  spec.description   = %q{Client gem to interact with G5 services.}
+  spec.homepage      = "https://github.com/g5/g5_foundation_client"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
@@ -18,6 +18,14 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "virtus"
+  spec.add_dependency "httparty"
+  spec.add_dependency "microformats2"
+  spec.add_dependency "g5_authentication_client", ">= 0.2"
+
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rspec"
+  spec.add_development_dependency "webmock"
+  spec.add_development_dependency "pry"
 end

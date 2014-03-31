@@ -1,5 +1,28 @@
+require "virtus"
+require "httparty"
+require "microformats2"
+require "g5_authentication_client"
 require "g5_foundation_client/version"
 
 module G5FoundationClient
-  # Your code goes here...
+  def self.endpoint_host
+    @endpoint_host || raise("endpoint_host must be set")
+  end
+
+  def self.endpoint_host=(host)
+    @endpoint_host = host
+  end
+
+  def self.access_token=(token)
+    @access_token = token
+  end
+
+  def self.access_token
+    @access_token ||= G5AuthenticationClient::Client.new.get_access_token
+  end
+
+  class RecordNotFoundException < Exception
+  end
 end
+
+require 'g5_foundation_client/models/location'
