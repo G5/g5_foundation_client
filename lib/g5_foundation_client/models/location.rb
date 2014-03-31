@@ -11,12 +11,7 @@ class G5FoundationClient::Location
 
     case response_code
     when 200
-      hcard = Microformats2.parse(response.body).cards.first
-      new(
-        uid: hcard.uid.to_s,
-        name: hcard.name.to_s,
-        phone: hcard.adr.format.tel.to_s
-      )
+      G5FoundationClient::Deserializers::Location.from_markup(response.body)
     when 404
       raise G5FoundationClient::RecordNotFoundException.new(
         "Couldn't find Location with UID: '#{uid}'"
@@ -31,6 +26,6 @@ class G5FoundationClient::Location
 protected
 
   def self.query_options
-    {query: { access_token:  G5FoundationClient::access_token } }
+    { query: { access_token:  G5FoundationClient::access_token } }
   end
 end

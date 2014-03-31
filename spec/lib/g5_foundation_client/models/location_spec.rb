@@ -30,12 +30,17 @@ describe G5FoundationClient::Location do
     end
 
     context "when there is a Location at that UID" do
-      before { stub_json(url, response) }
+      before do
+        stub_json(url, response)
+        G5FoundationClient::Deserializers::Location.
+          stub(:from_markup).
+          with(fixture("location_detail.html")).
+          and_return(location)
+      end
+      let(:location) { double }
       let(:response) { fixture("location_detail.html") }
 
-      its(:uid) { should eq(uid) }
-      its(:name) { should eq("Test Location") }
-      its(:phone) { should eq("123-123-1234") }
+      it { should eq(location) }
     end
 
     context "when there is no Location at that UID" do
