@@ -1,29 +1,31 @@
-# G5FoundationClient
+# G5 Foundation Client
 
-TODO: Write a gem description
+A Ruby gem to access G5 services, including [g5-hub](https://github.com/g5/g5-hub).
 
-## Installation
+### Installation
 
-Add this line to your application's Gemfile:
+Include `g5_foundation_client` in your Gemfile, or manually install with rubygems.
 
-    gem 'g5_foundation_client'
+### Usage
 
-And then execute:
+It's pretty limited right now. You may fetch a Location given a UID, which must point to a G5 Hub Location detail page.
 
-    $ bundle
+```ruby
+> model = G5FoundationClient::Location.find_by_uid("http://example.com/clients/g5-c-123-test/locations/g5-cl-123-test")
+=> #<G5FoundationClient::Location:0x007f4aa8c25ef8
+ @name="Location Name",
+ @phone="123-123-1234",
+ @uid=
+  "http://example.com/clients/g5-c-123-test/locations/g5-cl-123-test">
+> model.attributes
+=> {:uid=>
+  "http://example.com/clients/g5-c-123-test/locations/g5-cl-123-test",
+ :name=>"Test Name",
+ :phone=>"123-123-1234"}
+```
 
-Or install it yourself as:
+If this gets much more complicated – and it will – you should probably use YARD and point to rdoc.info, or whatever documentation builder you set up.
 
-    $ gem install g5_foundation_client
+### Contributing
 
-## Usage
-
-TODO: Write usage instructions here
-
-## Contributing
-
-1. Fork it ( http://github.com/<my-github-username>/g5_foundation_client/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Create a Github pull request. Please make sure that Travis CI passes before you do.
