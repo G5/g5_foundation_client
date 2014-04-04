@@ -1,5 +1,7 @@
 # G5 Foundation Client
 
+[![Build Status](https://travis-ci.org/G5/g5_foundation_client.svg)](https://travis-ci.org/G5/g5_foundation_client)
+
 A Ruby gem to access G5 services, including [g5-hub](https://github.com/g5/g5-hub).
 
 ### Installation
