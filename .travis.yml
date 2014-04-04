@@ -1,0 +1,9 @@
+language: ruby
+rvm:
+  # Core
+  - 1.9.3
+  # Reputation
+  - 2.0.0
+  # Everybody else
+  - 2.1.1
+script: bundle exec rspec spec
