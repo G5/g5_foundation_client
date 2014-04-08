@@ -28,6 +28,26 @@ It's pretty limited right now. You may fetch a Location given a UID, which must 
 
 If this gets much more complicated – and it will – you should probably use YARD and point to rdoc.info, or whatever documentation builder you set up.
 
+### Testing
+
+Some helpers methods are available to use (if you're using Rspec) by adding the following to `spec_helper`:
+
+```ruby
+require 'g5_foundation_client/rspec'
+```
+
+If your environment includes FactoryGirl, this will also require some factory definitions. You probably want this.
+
+This will give you a method to stub finding a `G5FoundationClient::Location`. Basic example:
+```ruby
+stub_location_for_uid(
+  "http://example.com/location_uid",
+  G5FoundationClient::Location.new(name: "My Location")
+)
+```
+
+If you have FactoryGirl, you can omit the second argument and it will build one for you. The `stub_location_for_uid` method will return the built location, which can pair nicely with a `let!` call to both build and stub in one shot.
+
 ### Contributing
 
 Create a Github pull request. Please make sure that Travis CI passes before you do.
