@@ -8,13 +8,17 @@ describe G5FoundationClient::Location do
       G5FoundationClient::Location.new(
         uid: "http://example.com/uid",
         name: "Test Name",
-        phone: "123-123-1234"
+        phone: "123-123-1234",
+        ga_tracking_id: "UA-1234-5",
+        ga_profile_id: "ga:1234"
       )
     end
 
     its(:uid) { should eql("http://example.com/uid") }
     its(:name) { should eql("Test Name") }
     its(:phone) { should eql("123-123-1234") }
+    its(:ga_tracking_id) { should eql("UA-1234-5") }
+    its(:ga_profile_id) { should eql("ga:1234") }
   end
 
   describe ".find_by_uid" do
