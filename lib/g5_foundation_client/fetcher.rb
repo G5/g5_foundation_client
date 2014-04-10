@@ -18,9 +18,4 @@ class G5FoundationClient::Fetcher
       )
     end
   end
-
-protected
-
-  def self.query_options
-  end
 end
