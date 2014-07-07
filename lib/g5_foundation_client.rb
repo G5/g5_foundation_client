@@ -20,4 +20,5 @@ end
 require 'g5_foundation_client/fetcher'
 
 require 'g5_foundation_client/models/location'
+require 'g5_foundation_client/deserializers/safe_access'
 require 'g5_foundation_client/deserializers/location'
