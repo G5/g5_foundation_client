@@ -9,6 +9,17 @@ module G5FoundationClient::RspecHelpers
 
     location
   end
+
+  def stub_client_for_uid(uid, client = nil)
+    client ||= FactoryGirl.build(:g5_client)
+
+    G5FoundationClient::Client.
+      stub(:find_by_uid).
+      with(uid).
+      and_return(client)
+
+    client
+  end
 end
 
 RSpec.configure do |config|

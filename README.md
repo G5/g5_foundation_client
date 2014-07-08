@@ -38,7 +38,7 @@ require 'g5_foundation_client/rspec'
 
 If your environment includes FactoryGirl, this will also require some factory definitions. You probably want this.
 
-This will give you a method to stub finding a `G5FoundationClient::Location`. Basic example:
+This will give you a method to stub finding a `G5FoundationClient::Location` and `G5FoundationClient::Client`. Basic example:
 ```ruby
 stub_location_for_uid(
   "http://example.com/location_uid",
@@ -46,7 +46,7 @@ stub_location_for_uid(
 )
 ```
 
-If you have FactoryGirl, you can omit the second argument and it will build one for you. The `stub_location_for_uid` method will return the built location, which can pair nicely with a `let!` call to both build and stub in one shot.
+If you have FactoryGirl, you can omit the second argument and it will build one for you. The `stub_location_for_uid` method (as well as its counterpart for clients) will return the built model, which can pair nicely with a `let!` call to both build and stub in one shot.
 
 ### Contributing
 
