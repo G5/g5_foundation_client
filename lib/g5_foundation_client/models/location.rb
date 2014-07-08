@@ -1,5 +1,10 @@
 class G5FoundationClient::Location
   include Virtus.model
+  extend G5FoundationClient::FindableByUid
+
+  def self.deserializer_class
+    G5FoundationClient::Deserializers::Location
+  end
 
   attribute :uid, String
   attribute :urn, String
@@ -18,10 +23,4 @@ class G5FoundationClient::Location
   attribute :region, String
   attribute :locality, String
   attribute :postal_code, String
-
-  def self.find_by_uid(uid)
-    G5FoundationClient::Fetcher.fetch_url(uid) do |markup|
-      G5FoundationClient::Deserializers::Location.from_markup(markup)
-    end
-  end
 end
