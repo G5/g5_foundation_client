@@ -27,8 +27,7 @@ describe G5FoundationClient::Deserializers::Location do
     end
 
     context "missing many fields" do
-      let(:markup) { fixture("location_detail_with_missing_fields.html") }
-
+      let(:markup) { fixture("empty_hcard.html") }
       its(:uid) { should be_nil }
     end
   end
