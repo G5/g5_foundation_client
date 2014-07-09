@@ -6,6 +6,7 @@ class G5FoundationClient::Client
     G5FoundationClient::Deserializers::Client
   end
 
+  attribute :locations, Array[G5FoundationClient::Location]
   attribute :uid, String
   attribute :urn, String
   attribute :name, String

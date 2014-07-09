@@ -3,8 +3,16 @@ module G5FoundationClient::Deserializers
     extend SafeAccess
 
     def self.from_markup(markup)
-      h = Microformats2.parse(markup).cards.first
-      G5FoundationClient::Location.new(
+      hcard = Microformats2.parse(markup).cards.first
+      from_hcard(hcard)
+    end
+
+    def self.from_hcard(hcard)
+      G5FoundationClient::Location.new(hcard_to_hash(hcard))
+    end
+
+    def self.hcard_to_hash(h)
+      {
         uid: with_safe_access { h.uid },
         urn: with_safe_access { h.g5_urn },
         name: with_safe_access { h.name },
@@ -22,7 +30,7 @@ module G5FoundationClient::Deserializers
         region: with_safe_access { h.adr.format.region },
         locality: with_safe_access { h.adr.format.locality },
         postal_code: with_safe_access { h.adr.format.postal_code }
-      )
+      }
     end
   end
 end

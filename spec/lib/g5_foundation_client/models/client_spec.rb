@@ -23,6 +23,30 @@ describe G5FoundationClient::Client do
     its(:domain_type) { should eql("MultiDomainClient") }
   end
 
+  describe "instantiating with nested hash of Locations" do
+    subject(:client) { G5FoundationClient::Client.new(attributes) }
+
+    context "when the nested parameters are correct" do
+      let(:attributes) do
+        {
+          name: "Client Name",
+          locations: [
+            { name: "Location 1" },
+            { name: "Location 2" }
+          ]
+        }
+      end
+
+      its(:name) { should eq("Client Name") }
+
+      it "instantiates associated Locations" do
+        expect(client.locations.length).to eq(2)
+        expect(client.locations.all? { |l| l.is_a?(G5FoundationClient::Location) }).to be_true
+        expect(client.locations.map(&:name)).to eq([ "Location 1", "Location 2" ])
+      end
+    end
+  end
+
   describe ".find_by_uid" do
     let(:uid) { "http://example.com/clients/g5-c-1234-client" }
     let(:response) { fixture("client_detail.html") }
