@@ -8,6 +8,7 @@ class G5FoundationClient::Location
 
   attribute :uid, String
   attribute :urn, String
+  attribute :client_uid, String
   attribute :name, String
   attribute :phone, String
   attribute :domain, String

@@ -8,6 +8,7 @@ describe G5FoundationClient::Location do
       G5FoundationClient::Location.new(
         uid: "http://example.com/urn",
         urn: "urn",
+        client_uid: "http://example.com/client_uid",
         name: "Test Name",
         phone: "123-123-1234",
         domain: "example.com",
@@ -28,6 +29,7 @@ describe G5FoundationClient::Location do
 
     its(:uid) { should eql("http://example.com/urn") }
     its(:urn) { should eql("urn") }
+    its(:client_uid) { should eql("http://example.com/client_uid") }
     its(:name) { should eql("Test Name") }
     its(:phone) { should eql("123-123-1234") }
     its(:domain) { should eql("example.com") }
