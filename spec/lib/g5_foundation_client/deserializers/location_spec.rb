@@ -11,7 +11,7 @@ describe G5FoundationClient::Deserializers::Location do
       its(:urn) { should eq("g5-cl-1234-location") }
       its(:client_uid) { should eq("http://example.com/clients/g5-c-1234-client") }
       its(:name) { should eq("Test Location") }
-      its(:phone) { should eq("123-123-1234") }
+      its(:phone_number) { should eq("123-123-1234") }
       its(:domain) { should eq("http://example.com/") }
       its(:corporate) { should be_true }
       its(:floor_plans) { should eq("1, 2, 3, studio apartments") }

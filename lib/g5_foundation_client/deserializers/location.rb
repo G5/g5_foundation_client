@@ -17,7 +17,7 @@ module G5FoundationClient::Deserializers
         urn: with_safe_access { h.g5_urn },
         client_uid: with_safe_access { h.org.format.uid.to_s},
         name: with_safe_access { h.name },
-        phone: with_safe_access { h.adr.format.tel },
+        phone_number: with_safe_access { h.adr.format.tel },
         domain: with_safe_access { h.g5_domain },
         corporate: with_safe_access { h.g5_corporate },
         floor_plans: with_safe_access { h.g5_floorplan },

@@ -10,7 +10,7 @@ class G5FoundationClient::Location
   attribute :urn, String
   attribute :client_uid, String
   attribute :name, String
-  attribute :phone, String
+  attribute :phone_number, String
   attribute :domain, String
   attribute :corporate, Boolean
   attribute :floor_plans, String
