@@ -20,9 +20,12 @@ end
 require 'g5_foundation_client/fetcher'
 
 require 'g5_foundation_client/models/findable_by_uid'
+require 'g5_foundation_client/models/integration_setting'
 require 'g5_foundation_client/models/location'
 require 'g5_foundation_client/models/client'
 
 require 'g5_foundation_client/deserializers/safe_access'
+require 'g5_foundation_client/deserializers/integration_setting'
 require 'g5_foundation_client/deserializers/location'
 require 'g5_foundation_client/deserializers/client'
+

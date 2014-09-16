@@ -8,7 +8,7 @@ module G5FoundationClient::Deserializers
     end
 
     def self.from_hcard(hcard)
-      G5FoundationClient::Location.new(hcard_to_hash(hcard))
+      G5FoundationClient::Location.new(hcard_to_hash(hcard).merge(integration_setting: IntegrationSetting.from_hcard(hcard)))
     end
 
     def self.hcard_to_hash(h)

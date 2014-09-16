@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
-  <body>
-    <section class="h-card">
-      <h2>
-        <a class="p-name u-uid u-url" href="http://example.com/clients/g5-c-1234-client/locations/g5-cl-1234-location">Test Location</a>
+<head></head>
+<body>
+<section class="h-card">
+    <h2>
+        <a class="p-name u-uid u-url" href="http://example.com/clients/g5-c-1234-client/locations/g5-cl-1234-location">Test
+            Location</a>
         <small class="p-g5-urn">g5-cl-1234-location</small>
-      </h2>
+    </h2>
 
-        <h4>Domain</h4>
-        <a class="u-url u-g5-domain" href="http://example.com/">http://example.com/</a>
+    <h4>Domain</h4>
+    <a class="u-url u-g5-domain" href="http://example.com/">http://example.com/</a>
 
-      <h4>Address</h4>
-      <p class="p-adr h-adr">
+    <h4>Address</h4>
+
+    <p class="p-adr h-adr">
         <span class="p-street-address">
           123 Test Way
           
@@ -26,72 +28,103 @@
         <span class="p-tel">123-123-1234</span>
         <span class="p-tel p-fax"></span>
         <span class="u-email">info@salidadelsolapts.com</span>
-      </p>
+    </p>
 
-      <p>
+    <p>
         <strong>Corporate:</strong>
-        <br />
+        <br/>
         <span class="p-g5-corporate">true</span>
-      </p>
-      <p>
-        <strong>Hours:</strong>
-        <br />
-        <pre class="p-g5-hour">Mon-Fri: 7am - 6pm, Sat: 8am - 3pm, Sunday: Closed</pre>
-      </p>
-      <p>
-        <strong>Floor Plans:</strong>
-        <br />
-        <span class="p-g5-floorplan">1, 2, 3, studio apartments</span>
-      </p>
-      <p>
-        <strong>Landmarks:</strong>
-        <br />
-        <span class="p-g5-landmark-1">Venture Marina</span>
-        <br />
-        <span class="p-g5-landmark-2">River Ridge Golf Course</span>
-      </p>
-      <p>
-        <strong>Property Features or Qualifiers:</strong>
-        <br />
-        <span class="p-g5-aparment-feature-1">Luxury</span>
-        <br />
-        <span class="p-g5-aparment-feature-2">Gated</span>
-        <br />
-        <span class="p-g5-aparment-feature-3"></span>
-      </p>
-      <p>
-        <strong>Primary Amenities:</strong>
-        <br />
-        <span class="p-g5-aparment-amenity-1">Stainless Steel Appliances</span>
-        <br />
-        <span class="p-g5-community-amenity-1">Fitness Center</span>
-      </p>
+    </p>
 
-      <h4>Google Analytics</h4>
-      <dl class="dl-horizontal">
+    <p>
+        <strong>Hours:</strong>
+        <br/>
+    <pre class="p-g5-hour">Mon-Fri: 7am - 6pm, Sat: 8am - 3pm, Sunday: Closed</pre>
+    </p>
+    <p>
+        <strong>Floor Plans:</strong>
+        <br/>
+        <span class="p-g5-floorplan">1, 2, 3, studio apartments</span>
+    </p>
+
+    <p>
+        <strong>Landmarks:</strong>
+        <br/>
+        <span class="p-g5-landmark-1">Venture Marina</span>
+        <br/>
+        <span class="p-g5-landmark-2">River Ridge Golf Course</span>
+    </p>
+
+    <p>
+        <strong>Property Features or Qualifiers:</strong>
+        <br/>
+        <span class="p-g5-aparment-feature-1">Luxury</span>
+        <br/>
+        <span class="p-g5-aparment-feature-2">Gated</span>
+        <br/>
+        <span class="p-g5-aparment-feature-3"></span>
+    </p>
+
+    <p>
+        <strong>Primary Amenities:</strong>
+        <br/>
+        <span class="p-g5-aparment-amenity-1">Stainless Steel Appliances</span>
+        <br/>
+        <span class="p-g5-community-amenity-1">Fitness Center</span>
+    </p>
+
+    <h4>Google Analytics</h4>
+    <dl class="dl-horizontal">
         <dt>Tracking ID</dt>
         <dd class="p-ga-tracking-id">UA-1234-1</dd>
 
         <dt>View Profile ID</dt>
         <dd class="p-ga-profile-id">ga:1234</dd>
-      </dl>
+    </dl>
 
-      <dl>
-            <dt>Twitter</dt>
-            <dd class="p-nickname p-g5-nickname-twitter">G5Platform</dd>
-            <dt>Facebook</dt>
-            <dd class="p-nickname p-g5-nickname-facebook">GetG5</dd>
-            <dt>Yelp</dt>
-            <dd class="p-nickname p-g5-nickname-yelp">g5-bend</dd>
-            <dt>Foursquare</dt>
-            <dd class="p-nickname p-g5-nickname-foursquare">https://foursquare.com/v/g5-search-marketing/4b720385f964a5201b6a2de3</dd>
-      </dl>
+    <div>
+        <h4>Integration Settings</h4>
+        <a href="http://192.168.33.30:3000/locations/g5-cl-6hbla15-perry-hertler/integration_settings/1/edit">Edit</a>
+        <dl class="dl-horizontal">
+            <dt>Inventory Service URL</dt>
+            <dd class="p-g5-inventory-service-url">http://myservice.com</dd>
 
-      <h4>Client</h4>
-      <p class="p-org h-card">
+            <dt>ETL Strategy Name</dt>
+            <dd class="p-g5-etl-strategy-name">centershift</dd>
+
+            <dt>Vendor Endpoint</dt>
+            <dd class="p-g5-vendor-endpoint">http://centershift.example.com</dd>
+
+            <dt>Vendor User Name</dt>
+            <dd class="p-g5-vendor-user-name">vun</dd>
+
+            <dt>Vendor Password</dt>
+            <dd class="p-g5-vendor-password">vpw</dd>
+
+            <dt class=p-g5-custom-integration-setting-name-0>channel</dt>
+            <dd class=p-g5-custom-integration-setting-value-0>6</dd>
+        </dl>
+    </div>
+
+    <dl>
+        <dt>Twitter</dt>
+        <dd class="p-nickname p-g5-nickname-twitter">G5Platform</dd>
+        <dt>Facebook</dt>
+        <dd class="p-nickname p-g5-nickname-facebook">GetG5</dd>
+        <dt>Yelp</dt>
+        <dd class="p-nickname p-g5-nickname-yelp">g5-bend</dd>
+        <dt>Foursquare</dt>
+        <dd class="p-nickname p-g5-nickname-foursquare">
+            https://foursquare.com/v/g5-search-marketing/4b720385f964a5201b6a2de3
+        </dd>
+    </dl>
+
+    <h4>Client</h4>
+
+    <p class="p-org h-card">
         <a class="p-name u-uid u-url" href="http://example.com/clients/g5-c-1234-client">Test Client</a>
-      </p>
-    </section>
+    </p>
+</section>
 
-  </body>
+</body>
 </html>
