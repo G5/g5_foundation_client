@@ -6,6 +6,7 @@ class G5FoundationClient::Location
     G5FoundationClient::Deserializers::Location
   end
 
+  attribute :integration_setting, G5FoundationClient::IntegrationSetting
   attribute :uid, String
   attribute :urn, String
   attribute :client_uid, String
