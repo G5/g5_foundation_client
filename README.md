@@ -10,6 +10,8 @@ Include `g5_foundation_client` in your Gemfile, or manually install with rubygem
 
 ### Usage
 
+Before you can run any of the code below, your environment must be configured as [G5 Authentication Client](https://github.com/G5/g5_authentication_client) expects.
+
 It's pretty limited right now. You may fetch a Location given a UID, which must point to a G5 Hub Location detail page.
 
 ```ruby
