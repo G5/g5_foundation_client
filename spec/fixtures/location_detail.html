@@ -83,28 +83,52 @@
     </dl>
 
     <div>
-        <h4>Integration Settings</h4>
-        <a href="http://192.168.33.30:3000/locations/g5-cl-6hbla15-perry-hertler/integration_settings/1/edit">Edit</a>
+        <h4>
+            <a href="http://192.168.33.30:3000/locations/g5-cl-6hc1xfr-perry-hertler/integration_settings/1/edit">Integration
+                Settings</a>
+        </h4>
         <dl class="dl-horizontal">
             <dt>Inventory Service URL</dt>
-            <dd class="p-g5-inventory-service-url">http://myservice.com</dd>
+            <dd class="p-g5-inventory-service-url">http://localhost:5777/api/v1/storage_facilities</dd>
+
+            <dt>Inventory Service Auth Token</dt>
+            <dd class="p-g5-inventory-service-auth-token">
+                authtoken
+            </dd>
 
             <dt>ETL Strategy Name</dt>
-            <dd class="p-g5-etl-strategy-name">centershift</dd>
+            <dd class="p-g5-etl-strategy-name">EtlStrategies::Centershift4</dd>
 
-            <dt>Vendor Endpoint</dt>
-            <dd class="p-g5-vendor-endpoint">http://centershift.example.com</dd>
+            <dt>Inventory Vendor Endpoint</dt>
+            <dd class="p-g5-inventory-vendor-endpoint">https://slc.centershift.com/sandbox40/SWS.asmx?WSDL</dd>
 
-            <dt>Vendor User Name</dt>
-            <dd class="p-g5-vendor-user-name">vun</dd>
+            <dt>Inventory Vendor User Name</dt>
+            <dd class="p-g5-inventory-vendor-user-name">G-5TSite</dd>
 
-            <dt>Vendor Password</dt>
-            <dd class="p-g5-vendor-password">vpw</dd>
+            <dt>Inventory Vendor Password</dt>
+            <dd class="p-g5-inventory-vendor-password">1qaz@Wsx</dd>
 
-            <dt class=p-g5-custom-integration-setting-name-0>channel</dt>
-            <dd class=p-g5-custom-integration-setting-value-0>6</dd>
+            <dt>Lead Strategy Name</dt>
+            <dd class="p-g5-lead-strategy-name">LeadStrategies::SiteLink</dd>
+
+            <dt>Lead Vendor Endpoint</dt>
+            <dd class="p-g5-lead-vendor-endpoint">https://www.smdservers.net/CCWs_3.5/CallCenterWs.asmx?WSDL</dd>
+
+            <dt>Lead Vendor User Name</dt>
+            <dd class="p-g5-lead-vendor-user-name">Administrator</dd>
+
+            <dt>Lead Vendor Password</dt>
+            <dd class="p-g5-lead-vendor-password">Demo</dd>
+
+            <dt class=p-g5-custom-integration-setting-name-0>corporate_code</dt>
+            <dd class=p-g5-custom-integration-setting-value-0>1000000129</dd>
+            <dt class=p-g5-custom-integration-setting-name-1>location_code</dt>
+            <dd class=p-g5-custom-integration-setting-value-1>1000000678</dd>
+            <dt class=p-g5-custom-integration-setting-name-2>channel</dt>
+            <dd class=p-g5-custom-integration-setting-value-2>2</dd>
         </dl>
     </div>
+
 
     <dl>
         <dt>Twitter</dt>

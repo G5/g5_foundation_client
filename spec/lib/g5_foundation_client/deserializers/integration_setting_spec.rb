@@ -7,12 +7,17 @@ describe G5FoundationClient::Deserializers::IntegrationSetting do
     context 'with many fields provided' do
       let(:markup) { fixture('location_detail.html') }
 
-      its(:inventory_service_url) { should eq('http://myservice.com') }
-      its(:etl_strategy_name) { should eq('centershift') }
-      its(:vendor_endpoint) { should eq('http://centershift.example.com') }
-      its(:vendor_user_name) { should eq('vun') }
-      its(:vendor_password) { should eq('vpw') }
-      its(:custom_integration_settings) { should eq({channel: '6'}) }
+      its(:inventory_service_url) { should eq('http://localhost:5777/api/v1/storage_facilities') }
+      its(:inventory_service_auth_token) { should eq('authtoken') }
+      its(:etl_strategy_name) { should eq('EtlStrategies::Centershift4') }
+      its(:inventory_vendor_endpoint) { should eq('https://slc.centershift.com/sandbox40/SWS.asmx?WSDL') }
+      its(:inventory_vendor_user_name) { should eq('G-5TSite') }
+      its(:inventory_vendor_password) { should eq('1qaz@Wsx') }
+      its(:lead_strategy_name) { should eq('LeadStrategies::SiteLink') }
+      its(:lead_vendor_endpoint) { should eq('https://www.smdservers.net/CCWs_3.5/CallCenterWs.asmx?WSDL') }
+      its(:lead_vendor_user_name) { should eq('Administrator') }
+      its(:lead_vendor_password) { should eq('Demo') }
+      its(:custom_integration_settings) { should eq({corporate_code: '1000000129', location_code: '1000000678', channel: '2'}) }
     end
   end
 end
