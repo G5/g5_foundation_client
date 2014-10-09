@@ -42,17 +42,17 @@ describe G5FoundationClient::Client do
       it "instantiates associated Locations" do
         expect(client.locations.length).to eq(2)
         expect(client.locations.all? { |l| l.is_a?(G5FoundationClient::Location) }).to be_true
-        expect(client.locations.map(&:name)).to eq([ "Location 1", "Location 2" ])
+        expect(client.locations.map(&:name)).to eq([ 'Location 1', 'Location 2'])
       end
     end
   end
 
   describe ".find_by_uid" do
-    let(:uid) { "http://example.com/clients/g5-c-1234-client" }
-    let(:response) { fixture("client_detail.html") }
-    before { stub_json(uid + "?access_token=token", response) }
+    let(:uid) { 'http://example.com/clients/g5-c-1234-client' }
+    let(:response) { fixture('hub-client.json') }
+    before { stub_json(uid + '?access_token=token', response) }
     subject(:find) { G5FoundationClient::Client.find_by_uid(uid) }
 
-    its(:name) { should eq("Test Client") }
+    its(:name) { should eq('no store') }
   end
 end
