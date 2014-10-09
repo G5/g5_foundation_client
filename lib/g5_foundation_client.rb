@@ -1,8 +1,7 @@
-require "virtus"
-require "httparty"
-require "microformats2"
-require "g5_authentication_client"
-require "g5_foundation_client/version"
+require 'active_support/core_ext/hash'
+require 'httparty'
+require 'g5_authentication_client'
+require 'g5_foundation_client/version'
 
 module G5FoundationClient
   def self.access_token=(token)
@@ -24,8 +23,4 @@ require 'g5_foundation_client/models/integration_setting'
 require 'g5_foundation_client/models/location'
 require 'g5_foundation_client/models/client'
 
-require 'g5_foundation_client/deserializers/safe_access'
-require 'g5_foundation_client/deserializers/integration_setting'
-require 'g5_foundation_client/deserializers/location'
-require 'g5_foundation_client/deserializers/client'
 
