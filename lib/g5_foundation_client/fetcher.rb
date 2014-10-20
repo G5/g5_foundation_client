@@ -15,7 +15,7 @@ class G5FoundationClient::Fetcher
                   "Couldn't find record at URL '#{url}'"
               )
       else
-        raise Exception.new(
+        raise G5FoundationClient::Error.new(
                   "I got an unexpected response code '#{response.response.code}'"
               )
     end

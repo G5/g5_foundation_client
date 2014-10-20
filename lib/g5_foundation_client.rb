@@ -11,11 +11,10 @@ module G5FoundationClient
   def self.access_token
     @access_token ||= G5AuthenticationClient::Client.new.get_access_token
   end
-
-  class RecordNotFoundException < Exception
-  end
 end
 
+require 'g5_foundation_client/error'
+require 'g5_foundation_client/record_not_found_exception'
 require 'g5_foundation_client/fetcher'
 
 require 'g5_foundation_client/models/findable_by_uid'

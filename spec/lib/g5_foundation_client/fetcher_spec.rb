@@ -36,6 +36,7 @@ describe G5FoundationClient::Fetcher do
 
       it "explodes violently" do
         expect { fetch }.to raise_error(/418/)
+        expect { fetch }.to raise_error(G5FoundationClient::Error)
       end
     end
   end
