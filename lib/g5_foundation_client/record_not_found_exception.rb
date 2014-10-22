@@ -1,2 +1,2 @@
-class G5FoundationClient::RecordNotFoundException < StandardError
+class G5FoundationClient::RecordNotFoundException < G5FoundationClient::Error
 end
