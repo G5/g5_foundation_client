@@ -23,7 +23,8 @@ describe G5FoundationClient::Location do
           street_address_2:    "apt 2",
           state:               "South Testakota",
           city:                "Testville",
-          postal_code:         "31337"
+          postal_code:         "31337",
+          status:              "Pending"
       )
     end
 
@@ -44,6 +45,7 @@ describe G5FoundationClient::Location do
     its(:region) { should eql("South Testakota") }
     its(:locality) { should eql("Testville") }
     its(:postal_code) { should eql("31337") }
+    its(:status) { should eql("Pending") }
     its(:inventory_integration_settings) { should be_nil }
     its(:lead_integration_settings) { should be_nil }
   end
