@@ -4,6 +4,8 @@ describe G5FoundationClient::IntegrationSetting do
   before { G5FoundationClient.access_token = 'token' }
 
   describe 'instantiating with a hash' do
+    let(:uid) { 'http://uid-is.com' }
+    let(:urn) { 'is' }
     let(:job_frequency_in_minutes) { 60 }
     let(:service_url) { 'http://inventory.service.example.com' }
     let(:location) { 'location' }
@@ -20,6 +22,8 @@ describe G5FoundationClient::IntegrationSetting do
                        vendor_endpoint:          vendor_endpoint,
                        vendor_user_name:         vendor_user_name,
                        vendor_password:          vendor_password,
+                       uid:                      uid,
+                       urn:                      urn,
                        vendor_action:            'inventory'
     } }
 
@@ -27,6 +31,8 @@ describe G5FoundationClient::IntegrationSetting do
 
     its(:job_frequency_in_minutes) { should eql(job_frequency_in_minutes) }
     its(:location) { should eql(location) }
+    its(:uid) { should eql(uid) }
+    its(:urn) { should eql(urn) }
     its(:vendor_action) { should eql(vendor_action) }
     its(:vendor_endpoint) { should eql(vendor_endpoint) }
     its(:vendor_user_name) { should eql(vendor_user_name) }
