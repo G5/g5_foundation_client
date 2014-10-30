@@ -19,7 +19,7 @@ class G5FoundationClient::IntegrationSetting
     'inventory' == self.vendor_action
   end
 
-  [:job_frequency_in_minutes, :vendor_action, :strategy_name, :vendor_endpoint, :vendor_user_name, :vendor_password].each do |field|
+  [:urn, :uid, :job_frequency_in_minutes, :vendor_action, :strategy_name, :vendor_endpoint, :vendor_user_name, :vendor_password].each do |field|
     define_method(field) { self.integration_setting_hash[field] }
   end
 
