@@ -4,6 +4,7 @@ describe G5FoundationClient::Location do
   before { G5FoundationClient.access_token = "token" }
 
   describe "instantiating with a hash" do
+    let(:client) { G5FoundationClient::Client.new(uid: 'myclient') }
     subject do
       G5FoundationClient::Location.new(
           uid:                 "http://example.com/urn",
@@ -24,10 +25,12 @@ describe G5FoundationClient::Location do
           state:               "South Testakota",
           city:                "Testville",
           postal_code:         "31337",
-          status:              "Pending"
+          status:              "Pending",
+          client:              client
       )
     end
 
+    its(:client) { should eql(client) }
     its(:uid) { should eql("http://example.com/urn") }
     its(:urn) { should eql("urn") }
     its(:client_uid) { should eql("http://example.com/client_uid") }
@@ -48,6 +51,10 @@ describe G5FoundationClient::Location do
     its(:status) { should eql("Pending") }
     its(:inventory_integration_settings) { should be_nil }
     its(:lead_integration_settings) { should be_nil }
+
+    it 'deletes client from hash' do
+      expect(subject.location_hash[:client]).to be_nil
+    end
   end
 
   describe '.find_by_uid' do
