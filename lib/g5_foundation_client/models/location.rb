@@ -1,13 +1,14 @@
 class G5FoundationClient::Location
   extend G5FoundationClient::FindableByUid
 
-  attr_accessor :location_hash
+  attr_accessor :location_hash, :client
 
   def initialize(attrs)
     self.location_hash = attrs.fetch(:location, attrs)
+    self.client        = self.location_hash.delete(:client)
   end
 
-  [:id, :uid, :client, :client_uid, :client_id, :name, :corporate, :created_at, :updated_at, :urn,
+  [:id, :uid, :client_uid, :client_id, :name, :corporate, :created_at, :updated_at, :urn,
    :street_address_1, :street_address_2, :city, :state, :postal_code,
    :fax, :email, :hours, :twitter_username, :facebook_username, :yelp_username,
    :pinterest_username, :foursquare_username, :tumblr_username, :instagram_username,
