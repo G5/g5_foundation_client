@@ -3,7 +3,7 @@ class G5FoundationClient::Client
   attr_accessor :client_hash
 
   def initialize(attrs)
-    self.client_hash = attrs.fetch(:client, attrs)
+    self.client_hash = ActiveSupport::HashWithIndifferentAccess.new attrs.fetch(:client, attrs)
   end
 
   [:id, :uid, :name, :urn, :vertical, :street_address_1, :street_address_2,

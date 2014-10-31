@@ -4,8 +4,8 @@ class G5FoundationClient::Location
   attr_accessor :location_hash, :client
 
   def initialize(attrs)
-    self.location_hash = attrs.fetch(:location, attrs)
-    self.client        = self.location_hash.delete(:client)
+    self.client        = attrs.delete(:client) || attrs.delete('client')
+    self.location_hash = ActiveSupport::HashWithIndifferentAccess.new attrs.fetch(:location, attrs)
   end
 
   [:id, :uid, :client_uid, :client_id, :name, :corporate, :created_at, :updated_at, :urn,

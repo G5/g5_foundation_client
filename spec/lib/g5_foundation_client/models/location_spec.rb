@@ -9,6 +9,7 @@ describe G5FoundationClient::Location do
       G5FoundationClient::Location.new(
           uid:                 "http://example.com/urn",
           urn:                 "urn",
+          client:              client,
           client_uid:          "http://example.com/client_uid",
           name:                "Test Name",
           phone_number:        "123-123-1234",
