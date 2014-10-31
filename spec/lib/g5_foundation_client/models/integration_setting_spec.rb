@@ -9,6 +9,7 @@ describe G5FoundationClient::IntegrationSetting do
     let(:job_frequency_in_minutes) { 60 }
     let(:service_url) { 'http://inventory.service.example.com' }
     let(:location) { 'location' }
+    let(:location_uid) { 'location-uid' }
     let(:strategy_name) { 'Centershift' }
     let(:vendor_endpoint) { 'http://centershift.example.com' }
     let(:vendor_user_name) { 'uname' }
@@ -22,15 +23,17 @@ describe G5FoundationClient::IntegrationSetting do
                        vendor_endpoint:          vendor_endpoint,
                        vendor_user_name:         vendor_user_name,
                        vendor_password:          vendor_password,
+                       vendor_action:            'inventory',
+                       location_uid:             location_uid,
                        uid:                      uid,
-                       urn:                      urn,
-                       vendor_action:            'inventory'
+                       urn:                      urn
     } }
 
     subject { G5FoundationClient::IntegrationSetting.new(init_hash) }
 
     its(:job_frequency_in_minutes) { should eql(job_frequency_in_minutes) }
     its(:location) { should eql(location) }
+    its(:location_uid) { should eql(location_uid) }
     its(:uid) { should eql(uid) }
     its(:urn) { should eql(urn) }
     its(:vendor_action) { should eql(vendor_action) }
