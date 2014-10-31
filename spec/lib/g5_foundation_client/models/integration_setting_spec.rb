@@ -29,6 +29,15 @@ describe G5FoundationClient::IntegrationSetting do
                        urn:                      urn
     } }
 
+    let(:expected_hash) do
+      hash = init_hash.dup
+      hash.delete(:location)
+      hash.keys.each do |key|
+        hash[key.to_s] = hash.delete(key)
+      end
+      hash
+    end
+
     subject { G5FoundationClient::IntegrationSetting.new(init_hash) }
 
     its(:job_frequency_in_minutes) { should eql(job_frequency_in_minutes) }
@@ -41,7 +50,7 @@ describe G5FoundationClient::IntegrationSetting do
     its(:vendor_user_name) { should eql(vendor_user_name) }
     its(:vendor_password) { should eql(vendor_password) }
     its(:strategy_name) { should eql(strategy_name) }
-    its(:to_settings_hash) { should eq(init_hash) }
+    its(:to_settings_hash) { should eq(expected_hash) }
     its(:inventory?) { should be_true }
     its(:lead?) { should be_false }
   end

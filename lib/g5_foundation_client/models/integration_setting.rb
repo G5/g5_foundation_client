@@ -3,8 +3,8 @@ class G5FoundationClient::IntegrationSetting
   attr_accessor :location
 
   def initialize(attrs)
-    self.integration_setting_hash = attrs
-    self.location                 = self.integration_setting_hash.delete(:location)
+    self.location                 = attrs.delete(:location) || attrs.delete('location')
+    self.integration_setting_hash = ActiveSupport::HashWithIndifferentAccess.new attrs
   end
 
   def to_settings_hash
