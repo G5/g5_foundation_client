@@ -45,20 +45,4 @@ class G5FoundationClient::Location
     return street_address_1 if street_address_2.blank?
     "#{street_address_1}\n#{street_address_2}"
   end
-
-  def integration_settings
-    @integration_settings ||= self.location_hash.fetch(:locations_integration_settings, []).collect { |is| G5FoundationClient::IntegrationSetting.new(is.merge(location: self)) }
-  end
-
-  def inventory_integration_settings
-    inventory_integration_setting_by_vendor_action :inventory?
-  end
-
-  def lead_integration_settings
-    inventory_integration_setting_by_vendor_action :lead?
-  end
-
-  def inventory_integration_setting_by_vendor_action(vendor_action)
-    integration_settings.detect { |is| is.send(vendor_action) }
-  end
 end
