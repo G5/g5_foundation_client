@@ -165,8 +165,7 @@
                 "apartment_amenity_1": "",
                 "apartment_amenity_2": "",
                 "community_amenity_1": "",
-                "community_amenity_2": "",
-                "locations_integration_settings": []
+                "community_amenity_2": ""
             },
             {
                 "uid": "http://hub.g5dxm.com/clients/g5-c-1sshwrc5-chateau-retirement-communities-llc/locations/g5-cl-1sshy11i-chateau-valley-center",
@@ -315,8 +314,7 @@
                 "apartment_amenity_1": "",
                 "apartment_amenity_2": "",
                 "community_amenity_1": "",
-                "community_amenity_2": "",
-                "locations_integration_settings": []
+                "community_amenity_2": ""
             },
             {
                 "uid": "http://hub.g5dxm.com/clients/g5-c-1sshwrc5-chateau-retirement-communities-llc/locations/g5-cl-1sshwrd0-chateau-bothell-landing",
@@ -465,8 +463,7 @@
                 "apartment_amenity_1": "",
                 "apartment_amenity_2": "",
                 "community_amenity_1": "",
-                "community_amenity_2": "",
-                "locations_integration_settings": []
+                "community_amenity_2": ""
             },
             {
                 "uid": "http://hub.g5dxm.com/clients/g5-c-1sshwrc5-chateau-retirement-communities-llc/locations/g5-cl-1sshy11h-chateau-pacific",
@@ -615,8 +612,7 @@
                 "apartment_amenity_1": "",
                 "apartment_amenity_2": "",
                 "community_amenity_1": "",
-                "community_amenity_2": "",
-                "locations_integration_settings": []
+                "community_amenity_2": ""
             }
         ]
     },
@@ -786,8 +782,7 @@
                 "apartment_amenity_1": "Stainless Steel Appliances ",
                 "apartment_amenity_2": "Washer \u0026 Dryer Hook-ups",
                 "community_amenity_1": "24-Hour Fitness Center",
-                "community_amenity_2": "Swimming Pool",
-                "locations_integration_settings": []
+                "community_amenity_2": "Swimming Pool"
             }
         ]
     },
@@ -957,8 +952,7 @@
                 "apartment_amenity_1": "Washers and Dryers",
                 "apartment_amenity_2": "",
                 "community_amenity_1": "a Fitness Center",
-                "community_amenity_2": "",
-                "locations_integration_settings": []
+                "community_amenity_2": ""
             },
             {
                 "uid": "http://hub.g5dxm.com/clients/g5-c-1sjhz1kl-holland-residential/locations/g5-cl-1stsc2hw-the-frank-estate",
@@ -1107,8 +1101,7 @@
                 "apartment_amenity_1": "Washer and Dryer in Unit",
                 "apartment_amenity_2": "Granite Countertops",
                 "community_amenity_1": "Swimming Pool",
-                "community_amenity_2": "BBQ Area",
-                "locations_integration_settings": []
+                "community_amenity_2": "BBQ Area"
             },
             {
                 "uid": "http://hub.g5dxm.com/clients/g5-c-1sjhz1kl-holland-residential/locations/g5-cl-i0ziddla-montair-apartment-homes",
@@ -1257,8 +1250,7 @@
                 "apartment_amenity_1": "Washer \u0026 Dryer in Unit",
                 "apartment_amenity_2": "European Style Fixtures and Faucets",
                 "community_amenity_1": "BBQ Area",
-                "community_amenity_2": "Tennis Court",
-                "locations_integration_settings": []
+                "community_amenity_2": "Tennis Court"
             },
             {
                 "uid": "http://hub.g5dxm.com/clients/g5-c-1sjhz1kl-holland-residential/locations/g5-cl-1sscntyz-tabula-rasa",
@@ -1407,8 +1399,7 @@
                 "apartment_amenity_1": "Washers and Dryers",
                 "apartment_amenity_2": "",
                 "community_amenity_1": "Furnished and Unfurnished Corporate Suites Available",
-                "community_amenity_2": "Washer and Dryer in every home",
-                "locations_integration_settings": []
+                "community_amenity_2": "Washer and Dryer in every home"
             },
             {
                 "uid": "http://hub.g5dxm.com/clients/g5-c-1sjhz1kl-holland-residential/locations/g5-cl-1surxgr0-my-block-wash-park",
@@ -1557,8 +1548,7 @@
                 "apartment_amenity_1": "Air Conditioning",
                 "apartment_amenity_2": "",
                 "community_amenity_1": "Rooftop Infinity Pool",
-                "community_amenity_2": "",
-                "locations_integration_settings": []
+                "community_amenity_2": ""
             },
             {
                 "uid": "http://hub.g5dxm.com/clients/g5-c-1sjhz1kl-holland-residential/locations/g5-cl-1stcdt44-rock-creek-landing",
@@ -6638,27 +6628,7 @@
                 "apartment_amenity_1": "Sauna",
                 "apartment_amenity_2": "Live-in Maid",
                 "community_amenity_1": "Swimming Pool",
-                "community_amenity_2": "Free Parking",
-                "locations_integration_settings": [
-                    {
-                        "location_uid": "http://hub.g5dxm.com/clients/g5-c-1soj8m6e-g5-multifamily/locations/g5-cl-1soja3fn-99-apartments",
-                        "urn": "g5-lis-7",
-                        "uid": "http://hub.g5dxm.com/clients/g5-c-1soj8m6e-g5-multifamily/locations/g5-cl-1soja3fn-99-apartments/locations_integration_settings/g5-lis-7",
-                        "vendor": "Centershift",
-                        "vendor_action": "lead",
-                        "id": 15,
-                        "strategy_name": "YardiVoyagerSeniorHousingLeadStrategy",
-                        "vendor_user_name": "yardiuser",
-                        "vendor_password": "yardi123",
-                        "vendor_endpoint": "https://www.iyardiasp.com/9925seniorhousing/WebServices/GuestCardSenior.asmx",
-                        "created_at": "2014-10-22T01:41:26.716Z",
-                        "updated_at": "2014-10-22T01:41:26.716Z",
-                        "database_platform": "SQL Server",
-                        "server_name": "aspdb02",
-                        "database_name": "adwgyos_convx",
-                        "property_code": "a5s"
-                    }
-                ]
+                "community_amenity_2": "Free Parking"
             },
             {
                 "uid": "http://hub.g5dxm.com/clients/g5-c-1soj8m6e-g5-multifamily/locations/g5-cl-1spcif5s-1212-apartments",
@@ -8370,27 +8340,7 @@
                 "apartment_amenity_1": "Dirt Floors",
                 "apartment_amenity_2": "Bedroom Ceiling Mirrors",
                 "community_amenity_1": "",
-                "community_amenity_2": "",
-                "locations_integration_settings": [
-                    {
-                        "location_uid": "http://hub.g5dxm.com/clients/g5-c-1skmeepf-clowns-monkeys-jokers/locations/g5-cl-1skmeept-blahblahblah",
-                        "urn": "g5-lis-6",
-                        "uid": "http://hub.g5dxm.com/clients/g5-c-1skmeepf-clowns-monkeys-jokers/locations/g5-cl-1skmeept-blahblahblah/locations_integration_settings/g5-lis-6",
-                        "vendor": "SiteLink",
-                        "vendor_action": "lead",
-                        "id": 18,
-                        "strategy_name": "SiteLinkLeadStrategy",
-                        "vendor_user_name": "Administrator",
-                        "vendor_password": "Demo",
-                        "vendor_endpoint": "noneed",
-                        "created_at": "2014-11-03T21:44:11.869Z",
-                        "updated_at": "2014-11-03T21:44:11.869Z",
-                        "location_code": "Demo3",
-                        "charge_mode": "test",
-                        "corporate_code": "CCTST",
-                        "blah": "blahssssdogddd"
-                    }
-                ]
+                "community_amenity_2": ""
             },
             {
                 "uid": "http://hub.g5dxm.com/clients/g5-c-1skmeepf-clowns-monkeys-jokers/locations/g5-cl-i1jllwev-integrations-test-site",
