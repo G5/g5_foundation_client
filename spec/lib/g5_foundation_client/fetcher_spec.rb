@@ -1,10 +1,9 @@
 require 'spec_helper'
 
 describe G5FoundationClient::Fetcher do
-  before { G5FoundationClient.access_token = "token" }
 
   describe ".fetch_url" do
-    let(:url) { "http://example.com/?access_token=token" }
+    let(:url) { "http://example.com/" }
     subject(:fetch) do
       yielded_markup = nil
       G5FoundationClient::Fetcher.fetch_url(url) do |markup|

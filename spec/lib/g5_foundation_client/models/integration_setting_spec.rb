@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe G5FoundationClient::IntegrationSetting do
-  before { G5FoundationClient.access_token = 'token' }
 
   describe 'instantiating with a hash' do
     let(:uid) { 'http://uid-is.com' }

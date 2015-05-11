@@ -2,9 +2,7 @@ class G5FoundationClient::Fetcher
   def self.fetch_url(url, &block)
     response = HTTParty.get(
         url,
-        {query:   {access_token: G5FoundationClient::access_token},
-         headers: {'Content-Type' => 'application/json', 'Accept' => 'application/json'}
-        }
+        headers: {'Content-Type' => 'application/json', 'Accept' => 'application/json'}
     )
 
     case response.response.code.to_i
