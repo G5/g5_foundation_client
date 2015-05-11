@@ -49,8 +49,6 @@ describe G5FoundationClient::Location do
     its(:locality) { should eql("Testville") }
     its(:postal_code) { should eql("31337") }
     its(:status) { should eql("Pending") }
-    its(:inventory_integration_settings) { should be_nil }
-    its(:lead_integration_settings) { should be_nil }
 
     it 'deletes client from hash' do
       expect(subject.location_hash[:client]).to be_nil
@@ -66,8 +64,5 @@ describe G5FoundationClient::Location do
     subject(:find) { G5FoundationClient::Location.find_by_uid(uid) }
 
     its(:name) { should eq('brussels') }
-    it 'has inventory integration settings' do
-      subject.inventory_integration_settings.integration_setting_hash[:strategy_name].should eq('vsn')
-    end
   end
 end
