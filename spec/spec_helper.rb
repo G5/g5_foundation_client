@@ -42,4 +42,5 @@ end
 RSpec.configure do |config|
   config.include Webmockery
   config.include FixturesHelper
+  config.after { G5FoundationClient.access_token = nil }
 end

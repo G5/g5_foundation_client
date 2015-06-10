@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe G5FoundationClient::Location do
+  before { G5FoundationClient.access_token = "token" }
 
   describe "instantiating with a hash" do
     let(:client) { G5FoundationClient::Client.new(uid: 'myclient') }
@@ -60,7 +61,7 @@ describe G5FoundationClient::Location do
       'http://example.com/clients/g5-c-1234-client/locations/g5-cl-1234-location'
     end
     let(:response) { fixture('hub-location.json') }
-    before { stub_json(uid, response) }
+    before { stub_json(uid + '?access_token=token', response) }
     subject(:find) { G5FoundationClient::Location.find_by_uid(uid) }
 
     its(:name) { should eq('brussels') }
