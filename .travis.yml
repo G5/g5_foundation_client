@@ -1,7 +1,5 @@
 language: ruby
 rvm:
-  # Core
-  - 1.9.3
   # Reputation
   - 2.0.0
   # Everybody else
