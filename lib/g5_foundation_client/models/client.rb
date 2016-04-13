@@ -16,7 +16,7 @@ class G5FoundationClient::Client
   end
 
   [:id, :uid, :name, :urn, :vertical, :street_address_1, :street_address_2,
-   :city, :state, :postal_code, :fax, :email, :tel, :domain_type, :domain, :twilio_pool_max].each do |field|
+   :city, :state, :postal_code, :fax, :email, :tel, :domain_type, :domain, :uses_twilio_call_service, :twilio_pool_max].each do |field|
     define_method(field) { self.client_hash[field] }
   end
 
