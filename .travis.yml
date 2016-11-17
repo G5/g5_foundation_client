@@ -1,7 +1,4 @@
 language: ruby
 rvm:
-  # Reputation
-  - 2.0.0
-  # Everybody else
   - 2.2.2
 script: bundle exec rspec spec
