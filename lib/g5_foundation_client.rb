@@ -18,6 +18,7 @@ require 'g5_foundation_client/record_not_found_exception'
 require 'g5_foundation_client/fetcher'
 
 require 'g5_foundation_client/models/findable_by_uid'
+require 'g5_foundation_client/models/amenity'
 require 'g5_foundation_client/models/location'
 require 'g5_foundation_client/models/client'
 

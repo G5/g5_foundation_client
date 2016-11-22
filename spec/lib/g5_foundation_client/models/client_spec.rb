@@ -41,7 +41,7 @@ describe G5FoundationClient::Client do
 
       it "instantiates associated Locations" do
         expect(client.locations.length).to eq(2)
-        expect(client.locations.all? { |l| l.is_a?(G5FoundationClient::Location) }).to be_true
+        expect(client.locations.all? { |l| l.is_a?(G5FoundationClient::Location) }).to be_truthy
         expect(client.locations.map(&:name)).to eq(['Location 1', 'Location 2'])
       end
     end

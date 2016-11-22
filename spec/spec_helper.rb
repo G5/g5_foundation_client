@@ -1,6 +1,7 @@
 require 'g5_foundation_client'
 
 require 'pry'
+require 'rspec/its'
 require 'webmock/rspec'
 
 module Webmockery

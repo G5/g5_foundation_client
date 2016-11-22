@@ -45,4 +45,8 @@ class G5FoundationClient::Location
     return street_address_1 if street_address_2.blank?
     "#{street_address_1}\n#{street_address_2}"
   end
+
+  def amenities
+    self.location_hash.fetch(:amenities, []).collect { |amen_hash| ::G5FoundationClient::Amenity.new(amen_hash) }
+  end
 end
