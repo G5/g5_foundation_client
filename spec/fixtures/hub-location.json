@@ -145,6 +145,22 @@
     "apartment_amenity_1": "",
     "apartment_amenity_2": "",
     "community_amenity_1": "",
-    "community_amenity_2": ""
+    "community_amenity_2": "",
+    "amenities": [
+      {
+        "id": 1,
+        "name": "Covered Parking",
+        "icon": "fa fa-parking-interior",
+        "created_at": "2016-11-22T09:20:16.549-08:00",
+        "updated_at": "2016-11-22T09:20:16.549-08:00"
+      },
+      {
+        "id": 3,
+        "name": "WIFI",
+        "icon": "fa fa-wifi",
+        "created_at": "2016-11-22T09:20:16.578-08:00",
+        "updated_at": "2016-11-22T09:20:16.578-08:00"
+      }
+    ]
   }
 }

@@ -27,7 +27,22 @@ describe G5FoundationClient::Location do
           city:                "Testville",
           postal_code:         "31337",
           status:              "Pending",
-          client:              client
+          client:              client,
+          amenities:           [{
+                                    id:         1,
+                                    name:       "Covered Parking",
+                                    icon:       "fa fa-parking-interior",
+                                    created_at: "2016-11-22T09:20:16.549-08:00",
+                                    updated_at: "2016-11-22T09:20:16.549-08:00"
+                                },
+                                {
+                                    id:         3,
+                                    name:       "WIFI",
+                                    icon:       "fa fa-wifi",
+                                    created_at: "2016-11-22T09:20:16.578-08:00",
+                                    updated_at: "2016-11-22T09:20:16.578-08:00"
+                                }
+                               ]
       )
     end
 
@@ -38,7 +53,7 @@ describe G5FoundationClient::Location do
     its(:name) { should eql("Test Name") }
     its(:phone_number) { should eql("123-123-1234") }
     its(:domain) { should eql("example.com") }
-    its(:corporate) { should be_true }
+    its(:corporate) { should be_truthy }
     its(:floor_plans) { should eql("Apartments") }
     its(:primary_amenity) { should eql("Pony Rides") }
     its(:primary_landmark) { should eql("An enormous bust of Brett Favre") }
@@ -53,6 +68,10 @@ describe G5FoundationClient::Location do
 
     it 'deletes client from hash' do
       expect(subject.location_hash[:client]).to be_nil
+    end
+
+    it 'builds amenities' do
+      expect(subject.amenities.collect(&:name)).to eq(['Covered Parking', 'WIFI'])
     end
   end
 
