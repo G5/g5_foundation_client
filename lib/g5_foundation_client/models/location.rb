@@ -46,7 +46,20 @@ class G5FoundationClient::Location
     "#{street_address_1}\n#{street_address_2}"
   end
 
+  def groups
+    build('groups')
+  end
+
   def amenities
-    self.location_hash.fetch(:amenities, []).collect { |amen_hash| ::G5FoundationClient::Amenity.new(amen_hash) }
+    build('amenities')
+  end
+
+  private
+
+  def build(attributes)
+    self.location_hash.fetch(attributes.to_sym, []).map do |hash|
+      klass = "::G5FoundationClient::#{attributes.singularize.capitalize}"
+      klass.constantize.new(hash)
+    end
   end
 end
