@@ -21,5 +21,5 @@ require 'g5_foundation_client/models/findable_by_uid'
 require 'g5_foundation_client/models/amenity'
 require 'g5_foundation_client/models/location'
 require 'g5_foundation_client/models/client'
-
+require 'g5_foundation_client/models/group'
 

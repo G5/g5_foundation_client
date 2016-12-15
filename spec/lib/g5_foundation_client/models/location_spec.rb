@@ -28,20 +28,41 @@ describe G5FoundationClient::Location do
           postal_code:         "31337",
           status:              "Pending",
           client:              client,
-          amenities:           [{
-                                    id:         1,
+          amenities:           [
+                                 {
+                                   id:         1,
                                     name:       "Covered Parking",
                                     icon:       "fa fa-parking-interior",
                                     created_at: "2016-11-22T09:20:16.549-08:00",
                                     updated_at: "2016-11-22T09:20:16.549-08:00"
+                                 },
+                                 {
+                                   id:         3,
+                                   name:       "WIFI",
+                                   icon:       "fa fa-wifi",
+                                   created_at: "2016-11-22T09:20:16.578-08:00",
+                                   updated_at: "2016-11-22T09:20:16.578-08:00"
+                                 }
+                               ],
+          groups:              [
+                                 {
+                                   id:            13,
+                                   name:          "san_diego_east_region",
+                                   description:   "East San Diego County",
+                                   urn:           "g5-g-1w28z0k5-san_diego_east_region",
+                                   core_group_id: 13,
+                                   created_at:    "2016-12-12T11:46:58.140-08:00",
+                                   updated_at:    "2016-12-12T11:46:58.140-08:00"
                                 },
                                 {
-                                    id:         3,
-                                    name:       "WIFI",
-                                    icon:       "fa fa-wifi",
-                                    created_at: "2016-11-22T09:20:16.578-08:00",
-                                    updated_at: "2016-11-22T09:20:16.578-08:00"
-                                }
+                                   id:            549,
+                                   name:          "san_diego",
+                                   description:   "San Diego",
+                                   urn:           "g5-g-iwmhw5yt-san_diego",
+                                   core_group_id: 550,
+                                   created_at:   "2016-12-12T11:51:38.205-08:00",
+                                   updated_at:   "2016-12-12T11:51:38.205-08:00"
+                                 }
                                ]
       )
     end
@@ -72,6 +93,10 @@ describe G5FoundationClient::Location do
 
     it 'builds amenities' do
       expect(subject.amenities.collect(&:name)).to eq(['Covered Parking', 'WIFI'])
+    end
+
+    it 'builds groups' do
+      expect(subject.groups.collect(&:id)).to eq([13, 549])
     end
   end
 
